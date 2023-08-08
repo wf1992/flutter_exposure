@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_exposure/src/scroll_notification_publisher.dart';
 
@@ -68,6 +69,7 @@ class _ScrollDetailProviderState extends State<ScrollDetailProvider>
         pixels: 0.0,
         viewportDimension: 0.0,
         axisDirection: AxisDirection.down,
+        devicePixelRatio: View.of(context).devicePixelRatio,
       ),
     );
     ScrollNotificationPublisher.of(context).add(fakeScrollNotification);
